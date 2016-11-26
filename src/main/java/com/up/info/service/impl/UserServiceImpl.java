@@ -13,7 +13,7 @@ public class UserServiceImpl implements IUserService {
 		User user = new User();
 		user.setDate(new Date());
 		user.setEmail("1111111@sysnew.com");
-		user.setId(1);
+		user.setId(id);
 		user.setName("zhangsan");
 		user.setPassword("password");
 		user.setRole("1");
