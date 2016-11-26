@@ -8,6 +8,7 @@ import java.util.Map;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,18 +21,20 @@ import com.up.info.service.IUserService;
 @Controller
 @RequestMapping("/user")
 public class UserController {
-	
+
+	private static final Logger logger = Logger.getLogger(UserController.class);
+
 	@Resource
 	IUserService userService;
-	
+
 	@RequestMapping("query")
 	public ModelAndView query(HttpServletRequest req) {
-		ModelAndView mv = new ModelAndView("succ");
+		ModelAndView mv = new ModelAndView("succ.jsp");
 		User user = userService.queryById(1);
 		mv.addObject("user", user);
 		return mv;
 	}
-	
+
 	@RequestMapping(value = "queryUsers", method = RequestMethod.GET)
 	@ResponseBody
 	public Map<String, Object> queryUsers() {
@@ -41,6 +44,17 @@ public class UserController {
 			users.add(userService.queryById(i));
 		}
 		resp.put("users", users);
+		resp.put("respCode", "00");
+		return resp;
+	}
+
+	@RequestMapping(value = "printFile")
+	@ResponseBody
+	public Map<String, Object> printFile(HttpServletRequest req) {
+		String fileName = req.getParameter("fileName");
+		logger.info("receive file: " + fileName);
+		Map<String, Object> resp = new HashMap<String, Object>();
+		resp.put("fileName", fileName);
 		resp.put("respCode", "00");
 		return resp;
 	}

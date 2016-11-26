@@ -11,4 +11,5 @@
                         http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 	
 	<bean id="userController" class="com.up.info.controller.UserController"></bean>
+	<bean id="defaultController" class="com.up.info.controller.DefaultController"></bean>
 </beans>
