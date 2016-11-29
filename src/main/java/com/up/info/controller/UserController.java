@@ -29,7 +29,7 @@ public class UserController {
 
 	@RequestMapping("query")
 	public ModelAndView query(HttpServletRequest req) {
-		ModelAndView mv = new ModelAndView("succ.jsp");
+		ModelAndView mv = new ModelAndView("succ");
 		User user = userService.queryById(1);
 		mv.addObject("user", user);
 		return mv;
