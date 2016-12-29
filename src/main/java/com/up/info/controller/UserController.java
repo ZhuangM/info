@@ -27,9 +27,30 @@ public class UserController {
 	@Resource
 	IUserService userService;
 
+	@RequestMapping(value = "login", method = RequestMethod.POST)
+	public ModelAndView login(HttpServletRequest req) {
+		String username = req.getParameter("username");
+		String password = req.getParameter("password");
+		String role = req.getParameter("role");
+		// TODO
+		System.out.println(username + " | " + password + " | " + role);
+		User user = new User();
+		user.setUsername(username);
+		user.setPassword(password);
+		user.setRole(role);
+		boolean verifySuccess = userService.verifyIdentity(user);
+		ModelAndView mav = new ModelAndView();
+		if (verifySuccess) {
+			mav.setViewName("jsp/succ");
+		} else {
+			mav.setViewName("jsp/error");
+		}
+		return mav;
+	}
+
 	@RequestMapping("query")
 	public ModelAndView query(HttpServletRequest req) {
-		ModelAndView mv = new ModelAndView("succ");
+		ModelAndView mv = new ModelAndView("jsp/succ");
 		User user = userService.queryById(1);
 		mv.addObject("user", user);
 		return mv;
