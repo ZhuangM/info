@@ -17,7 +17,7 @@ public class IndexController {
 	@RequestMapping("")
 	public ModelAndView index(HttpServletRequest req, HttpServletResponse resp) {
 		if (logger.isInfoEnabled()) {
-			logger.info("index req.");
+			logger.info("default request.");
 		}
 		return new ModelAndView("index");
 	}
