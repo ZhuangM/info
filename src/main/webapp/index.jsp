@@ -10,13 +10,11 @@
 <script
 	src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<<<<<<< HEAD
 <body
 	style="background-image: images/login.png; background-position: center; background-repeat: repeat-y">
 	<div>
 		<div>welcome</div>
 	</div>
-=======
 <body>
 	<center>
 		<form action="user/login" method="post">
@@ -43,6 +41,5 @@
 			</table>
 		</form>
 	</center>
->>>>>>> 880a6a47d52f4647baad85a74d65eabf237f8752
 </body>
 </html>
