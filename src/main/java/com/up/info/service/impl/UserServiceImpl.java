@@ -37,7 +37,7 @@ public class UserServiceImpl implements IUserService {
 	public boolean verifyIdentity(User user) {
 		if (null == user || StringUtils.isBlank(user.getUsername()) || StringUtils.isBlank(user.getPassword())
 				|| StringUtils.isBlank(user.getRole())) {
-			logger.warn("username | password | role is empty.");
+			logger.warn("[username | password | role] is empty.");
 			return false;
 		}
 		int count = userDAO.query4Login(user.getUsername(), user.getPassword(), user.getRole());

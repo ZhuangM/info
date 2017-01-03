@@ -33,7 +33,7 @@ public class UserController {
 		String password = req.getParameter("password");
 		String role = req.getParameter("role");
 		// TODO
-		System.out.println(username + " | " + password + " | " + role);
+		logger.info("request param: " + username + " | " + password + " | " + role);
 		User user = new User();
 		user.setUsername(username);
 		user.setPassword(password);
@@ -41,9 +41,9 @@ public class UserController {
 		boolean verifySuccess = userService.verifyIdentity(user);
 		ModelAndView mav = new ModelAndView();
 		if (verifySuccess) {
-			mav.setViewName("jsp/succ");
+			mav.setViewName("/jsp/succ");
 		} else {
-			mav.setViewName("jsp/error");
+			mav.setViewName("/jsp/error");
 		}
 		return mav;
 	}
