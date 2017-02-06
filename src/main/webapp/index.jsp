@@ -1,45 +1,47 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<title>信息系统v1.0</title>
-<link rel="stylesheet"
-	href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="jquery/jquery-1.12.0.min.js"></script>
-<script
-	src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>信息管理系统</title>
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript">
+	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+</script>
+<!-- Web-Fonts -->
+<link href='//fonts.googleapis.com/css?family=Poiret+One'
+	rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Play:700' rel='stylesheet'
+	type='text/css'>
+<!-- Web-Fonts end here -->
 </head>
-<body
-	style="background-image: images/login.png; background-position: center; background-repeat: repeat-y">
-	<div>
-		<div>welcome</div>
-	</div>
 <body>
-	<center>
-		<form action="user/login" method="post">
-			<table>
-				<tr>
-					<td><label>用户名: </label></td>
-					<td><input type="text" name="username"></td>
-				</tr>
-				<tr>
-					<td><label>密码: </label></td>
-					<td><input type="password" name="password"></td>
-				</tr>
-				<tr>
-					<td><label>身份: </label></td>
-					<td><label><input type="checkbox" name="role"
-							value="0" checked="checked">用户</label>&nbsp;<label><input
-							type="checkbox" name="role" value="1">管理员</label></td>
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-					<td><input type="submit" value="登录">&nbsp;<input
-						type="reset" value="重置"></td>
-				</tr>
-			</table>
-		</form>
-	</center>
+	<div class="header">
+		<h1>Staff Login Form</h1>
+	</div>
+	<div class="content">
+		<div class="content1">
+			<h1>LOGIN</h1>
+		</div>
+		<div class="content2">
+			<form action="user/login" method="post">
+				<input type="text" name="username" value="USERNAME"
+					onfocus="this.value = '';"
+					onblur="if (this.value == '') {this.value = 'USERNAME';}">
+				<input type="password" name="password" value="PASSWORD"
+					onfocus="this.value = '';"
+					onblur="if (this.value == '') {this.value = 'PASSWORD';}">
+				<input type="submit" value="Login">
+			</form>
+		</div>
+	</div>
+	<div class="footer">
+		<p>
+			Copyright © 2016 Staff Login Form. All Rights Reserved | Design by <a
+				href="https://w3layouts.com/" target="_blank">w3layouts</a>
+		</p>
+	</div>
 </body>
 </html>

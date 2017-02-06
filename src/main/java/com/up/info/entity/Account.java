@@ -26,7 +26,9 @@ public class Account extends BaseEntity {
 	private String url;
 
 	/** 记录创建时间 */
-	private Date date;
+	private Date create_time;
+
+	private Date alter_time;
 
 	public String getUsername() {
 		return username;
@@ -60,12 +62,20 @@ public class Account extends BaseEntity {
 		this.url = url;
 	}
 
-	public Date getDate() {
-		return date;
+	public Date getCreate_time() {
+		return create_time;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setCreate_time(Date create_time) {
+		this.create_time = create_time;
+	}
+
+	public Date getAlter_time() {
+		return alter_time;
+	}
+
+	public void setAlter_time(Date alter_time) {
+		this.alter_time = alter_time;
 	}
 
 }

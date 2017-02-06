@@ -3,7 +3,7 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.up.info.dao.UserDAO">
 	<select id="query4Login" parameterType="String" resultType="int">
-		SELECT COUNT(*) FROM USER
+		SELECT COUNT(*) FROM ACCOUNT
 		WHERE USERNAME = #{username} AND
 		PASSWORD = #{password} AND
 		ROLE = #{role}

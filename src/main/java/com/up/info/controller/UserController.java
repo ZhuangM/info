@@ -31,7 +31,7 @@ public class UserController {
 	public ModelAndView login(HttpServletRequest req) {
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
-		String role = req.getParameter("role");
+		String role = "1";
 		// TODO
 		logger.info("request param: " + username + " | " + password + " | " + role);
 		User user = new User();
