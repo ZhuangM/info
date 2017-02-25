@@ -1,0 +1,63 @@
+#container {
+	width: 1000px;
+	margin: 0 auto;
+	background-color: #CF3;
+}
+
+#header {
+	height: 80px;
+	background-color: #093;
+}
+
+#header_title {
+	height: 40px;
+	width: 200px;
+	float: left;
+	margin: 20px 0 0 10px;
+	font-size: 24px;
+	background: #90C;
+}
+
+#header_wel {
+	height: 30px;
+	width: 300px;
+	float: left;
+	margin: 25px 0 0 485px;
+	font-size: 17px;
+	background: #90C;
+}
+
+.clear {
+	clear: both;
+}
+
+#menu {
+	height: 30px;
+	background-color: red;
+}
+
+#menu_finance, #menu_account, #menu_admin {
+	margin-left: 10px;
+	font-size: 18px;
+	background: #90C;
+}
+
+#content {
+	height: 600px;
+	background-color: #0FF;
+}
+
+#content_form {
+	height: 100px;
+	background-color: grey;
+}
+
+#content_main {
+	height: 500px;
+	background-color: blue;
+}
+
+#logo {
+	height: 30px;
+	background-color: green;
+}
